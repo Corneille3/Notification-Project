@@ -1,0 +1,6 @@
+FROM httpd:2.4
+COPY index.html /usr/local/apache2/htdocs/
+RUN sed -i 's/Listen 80/Listen 9090/' /usr/local/apache2/conf/httpd.conf
+RUN mkdir -p /usr/local/apache2/htdocs/api \
+ && printf "OK\n" > /usr/local/apache2/htdocs/api/healthz
+EXPOSE 9090
