@@ -1,19 +1,39 @@
-# Terraform
-.terraform/
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform state files
 *.tfstate
 *.tfstate.*
+
+# Crash logs
 crash.log
-crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+# Override files
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
+
+# CLI configuration files
 .terraformrc
 terraform.rc
 
-# Keep this file in git (dependency lock)
-!.terraform.lock.hcl
+# AWS credentials and config (if accidentally placed in repo)
+*.pem
+*.key
+.aws/credentials
+.aws/config
 
-# Misc
-.env
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# OS-specific files
 .DS_Store
+Thumbs.db
